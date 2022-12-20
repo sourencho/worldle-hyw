@@ -704,7 +704,7 @@ export const translations = {
 
 i18n
   .use(initReactI18next)
-  .use(LanguageDetector)
+  // .use(LanguageDetector) don't use language detector to default to armenian
   .init({
     resources: translations,
     interpolation: {

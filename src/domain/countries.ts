@@ -13,6 +13,7 @@ import { polishCountryNames } from "./countries.name.pl";
 import { germanCountryNames } from "./countries.name.de";
 import { countryCodesWithImage } from "./countries.image";
 import { japaneseCountryNames } from "./countries.name.ja";
+import { westernArmenianCountryNames } from "./countries.name.hyw";
 
 export interface Country {
   code: string;
@@ -32,6 +33,8 @@ export const bigEnoughCountriesWithImage = countriesWithImage.filter(
 
 export function getCountryName(language: string, country: Country) {
   switch (language) {
+    case "hyw":
+      return westernArmenianCountryNames[country.code];
     case "co":
       return corsicanCountryNames[country.code];
     case "fr":

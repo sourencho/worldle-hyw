@@ -66,7 +66,7 @@ export function Settings({
             {t("settings.theme")}
           </label>
         </div>
-        <div className="flex p-1">
+        {/* <div className="flex p-1">
           <select
             id="setting-language"
             className="h-8 dark:bg-slate-800 w-16 p-1"
@@ -85,7 +85,7 @@ export function Settings({
           >
             {t("settings.language")}
           </label>
-        </div>
+        </div> */}
       </div>
       <div className="my-4 flex flex-col gap-2">
         <header className="my-2">

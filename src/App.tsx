@@ -4,6 +4,7 @@ import { Game } from "./components/Game";
 import React, { useEffect, useMemo, useState } from "react";
 import { Infos } from "./components/panels/Infos";
 import { useTranslation } from "react-i18next";
+import { InfosHyw } from "./components/panels/InfosHyw";
 import { InfosCo } from "./components/panels/InfosCo";
 import { InfosFr } from "./components/panels/InfosFr";
 import { InfosHu } from "./components/panels/InfosHu";
@@ -44,8 +45,8 @@ export default function App() {
 
   let InfosComponent;
   switch (i18n.resolvedLanguage) {
-    case "co":
-      InfosComponent = InfosCo;
+    case "hyw":
+      InfosComponent = InfosHyw
       break;
     case "fr":
       InfosComponent = InfosFr;
@@ -108,7 +109,7 @@ export default function App() {
               <Twemoji text="❓" />
             </button>
             <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              MOLORIG
+              Մոլորիկ
             </h1>
             <button
               className="ml-3 text-xl"
@@ -131,31 +132,18 @@ export default function App() {
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
-            <Worldle />? -
-            {country && supportLink[country.code] != null ? (
-              <a
-                className="underline pl-1"
-                href={supportLink[country.code]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="w-max">{t(`support.${country.code}`)}</div>
-              </a>
-            ) : (
-              <a
-                className="underline pl-1"
-                href="https://www.ko-fi.com/teuteuf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="w-max">
-                  <Twemoji
-                    text={t("buyMeACoffee")}
-                    options={{ className: "inline-block" }}
-                  />
-                </div>
-              </a>
-            )}
+            <Worldle />? - {' '}
+              <div className="w-max">
+                {' '} տես {' '}
+                <a
+                  href="https://www.parig.xyz/"
+                  className="underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Բառիկ
+                </a>
+              </div>
           </footer>
         </div>
       </div>

@@ -59,7 +59,7 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
           />
           <div className="my-2">
             Երկրորդ կռահումդ, <span className="uppercase font-bold">Ֆինլանտա</span>, աւելի մօտ է։ 
-            {formatDistance(3206000, settingsData.distanceUnit)}-ով հեռու, Հառաւ-Արեւելեան ուղղութեամբ, եւ 84%:
+            {' '}{formatDistance(3206000, settingsData.distanceUnit)}-ով հեռու, Հառաւ-Արեւելեան ուղղութեամբ, եւ 84%:
           </div>
         </div>
         <div>
@@ -107,21 +107,9 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
           rel="noopener noreferrer"
         >
           WORLDLE
-        </a>{" "}
-          which was made by{" "}
-          <a
-            className="underline"
-            href="https://twitter.com/teuteuf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @teuteuf
-          </a>{" "}
-      </div>
-      <div className="space-y-3 text-justify pb-3">
-        <div>
-        Adapted by {' '}
-        <a
+        </a>
+        {' '} adapted by {' '}
+            <a
               href="https://twitter.com/sourenig"
               className="underline"
               target="_blank"
@@ -141,11 +129,10 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
             {' '} using open source {' '}
             <a
               href="https://github.com/teuteuf/worldle"
-              className="underline font-bold"
+              className="underline"
             >
               code
             </a>{' '}
-        </div>
       </div>
     </Panel>
   );

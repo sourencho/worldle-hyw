@@ -97,7 +97,7 @@ export const translations = {
         win: "Յաղթելու %",
         currentStreak: "Շարունակականօրէն յաղթեցիր...",
         maxStreak: "Առաւելագոյն շարունակականութիւնդ",
-        averageBestDistance: "Best Distances Average",
+        averageBestDistance: "Ամէնէն Լաւ Հեռաւորութիւններու Միջին",
         guessDistribution: "Գուշակման բաժանում՝",
       },
       install: {

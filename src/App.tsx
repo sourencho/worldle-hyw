@@ -132,9 +132,9 @@ export default function App() {
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
-            <Worldle />? - {' '}
+            Սիրեցի՞ր Մոլորիկը -&nbsp;
               <div className="w-max">
-                {' '} տես {' '}
+                {' '}Տես  {' '}
                 <a
                   href="https://www.parig.xyz/"
                   className="underline"
@@ -143,6 +143,7 @@ export default function App() {
                 >
                   Բառիկ
                 </a>
+                ը
               </div>
           </footer>
         </div>

@@ -40,7 +40,7 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            <span className="uppercase font-bold">Չիլէ</span> կռահումդ 
+            <span className="uppercase font-bold">Չիլէ</span> կռահումդ {' '}
             {formatDistance(13557000, settingsData.distanceUnit)}-ով հեռու է պատասխանէն, որ կը գտնուի Հիւսիս-Արեւելեալ 
             ուղղութեամբ, եւ ունիս 32% մօտիկութիւն, որովհետեւ բաւական հեռու է։
           </div>

@@ -210,7 +210,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 className="underline text-center block mt-4 whitespace-nowrap"
-                href={`https://www.google.com/maps?q=${countryName}+${country.code.toUpperCase()}&hl=hy`}
+                href={`https://www.google.com/maps?q=${countryName}&hl=hy`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

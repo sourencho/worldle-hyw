@@ -20,7 +20,6 @@ import { Twemoji } from "@teuteuf/react-emoji-render";
 import { countries } from "../domain/countries.position";
 import { useNewsNotifications } from "../hooks/useNewsNotifications";
 
-const ENABLE_TWITCH_LINK = false;
 const MAX_TRY_COUNT = 6;
 
 interface GameProps {
@@ -110,7 +109,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
       guesses[guesses.length - 1].distance > 0
     ) {
       toastId = toast.info(
-        getCountryName(i18n.resolvedLanguage, country).toUpperCase(),
+        getCountryName(i18n.resolvedLanguage, country),
         {
           autoClose: false,
           delay: 2000,
@@ -129,7 +128,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
     <div className="flex-grow flex flex-col mx-2">
       {hideImageMode && !gameEnded && (
         <button
-          className="font-bold border-2 p-1 rounded uppercase my-2 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
+          className="font-bold border-2 p-1 rounded my-2 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
           type="button"
           onClick={() => setHideImageMode(false)}
         >
@@ -181,7 +180,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
       </div>
       {rotationMode && !hideImageMode && !gameEnded && (
         <button
-          className="font-bold rounded p-1 border-2 uppercase mb-2 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
+          className="font-bold rounded p-1 border-2 mb-2 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
           type="button"
           onClick={() => setRotationMode(false)}
         >
@@ -211,9 +210,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 className="underline text-center block mt-4 whitespace-nowrap"
-                href={`https://www.google.com/maps?q=${countryName}+${country.code.toUpperCase()}&hl=${
-                  i18n.resolvedLanguage
-                }`}
+                href={`https://www.google.com/maps?q=${countryName}+${country.code.toUpperCase()}&hl=hy`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -234,38 +231,6 @@ export function Game({ settingsData, updateSettings }: GameProps) {
                 />
               </a>
             </div>
-            {ENABLE_TWITCH_LINK && (
-              <div className="flex flex-wrap gap-4 justify-center">
-                <a
-                  className="underline text-center block mt-4 whitespace-nowrap"
-                  href="https://www.twitch.tv/t3uteuf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twemoji
-                    text="More? Play on Twitch! 👾"
-                    options={{ className: "inline-block" }}
-                  />
-                </a>
-              </div>
-            )}
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                className="underline text-center block mt-4 whitespace-nowrap"
-                href="https://emovi.teuteuf.fr/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twemoji
-                  text={
-                    dayString === "2022-07-17"
-                      ? "Let's celebrate #WorldEmojiDay! Play Emovi! 🎥"
-                      : "Try my new game, play Emovi! 🎥"
-                  }
-                  options={{ className: "inline-block" }}
-                />
-              </a>
-            </div>
           </>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -276,7 +241,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
                 setCurrentGuess={setCurrentGuess}
               />
               <button
-                className="rounded font-bold p-1 flex items-center justify-center border-2 uppercase my-0.5 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
+                className="rounded font-bold p-1 flex items-center justify-center border-2 my-0.5 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
                 type="submit"
               >
                 <Twemoji

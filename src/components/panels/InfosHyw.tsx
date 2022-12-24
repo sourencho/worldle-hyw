@@ -14,7 +14,7 @@ interface InfosProps {
 
 export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
   return (
-    <Panel title="How to play" isOpen={isOpen} close={close}>
+    <Panel title="Խաղի Կանոնները" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           6 փորձով գուշակէ Մոլորիկը։
@@ -40,7 +40,7 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            <span className="uppercase font-bold">Չիլէ</span> կռահումդ {' '}
+            <span className="font-bold">Չիլէ</span> կռահումդ {' '}
             {formatDistance(13557000, settingsData.distanceUnit)}-ով հեռու է պատասխանէն, որ կը գտնուի Հիւսիս-Արեւելեալ 
             ուղղութեամբ, եւ ունիս 32% մօտիկութիւն, որովհետեւ բաւական հեռու է։
           </div>
@@ -58,7 +58,7 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Երկրորդ կռահումդ, <span className="uppercase font-bold">Ֆինլանտա</span>, աւելի մօտ է։ 
+            Երկրորդ կռահումդ, <span className="font-bold">Ֆինլանտա</span>, աւելի մօտ է։ 
             {' '}{formatDistance(3206000, settingsData.distanceUnit)}-ով հեռու, Հառաւ-Արեւելեան ուղղութեամբ, եւ 84%:
           </div>
         </div>
@@ -75,7 +75,7 @@ export function InfosHyw({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Յաջորդ կռահումդ, <span className="uppercase font-bold">Լիբանան</span>, ճիշդ պատասխանն է։ Շնորհաւո՜ր։
+            Յաջորդ կռահումդ, <span className="font-bold">Լիբանան</span>, ճիշդ պատասխանն է։ Շնորհաւո՜ր։
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
         </div>
